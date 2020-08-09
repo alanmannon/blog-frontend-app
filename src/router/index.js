@@ -4,9 +4,11 @@ import Home from '../views/Home.vue';
 import Sample from '../views/Sample.vue';
 import Signup from '../views/Signup.vue';
 import Login from "../views/Login.vue";
+import PostIndex from "../views/PostIndex.vue";
+import PostsNew from "../views/PostsNew.vue"
 
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -38,12 +40,26 @@ const routes = [
     name: "login",
     component: Login
   },
+
+  {
+    path: "/index.js",
+    name: "Post Index",
+    component: PostIndex
+  },
+
+  {
+    path: "/new.js",
+    name: "Posts New",
+    component: PostsNew
+  },
+
+
 ];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
 export default router;
