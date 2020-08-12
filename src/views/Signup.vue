@@ -8,6 +8,9 @@
       <div class="form-group">
         <label>Name:</label> 
         <input type="text" class="form-control" v-model="name">
+        <small v-if="name.length <= 10"> {{ name.length}} / 20</small>
+        <large v-if="name.length > 10 && name.length  <= 20"> {{ name.length}} / 20</large>
+        <large class='text-danger' v-if="name.length > 20"> You know better than that. Please delete {{name.length - 20}} characters</large>
       </div>
       <div class="form-group">
         <label>Email:</label>

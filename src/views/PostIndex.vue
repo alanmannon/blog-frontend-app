@@ -2,7 +2,7 @@
   <div class="postindex">
     <h1>{{ message }}</h1>
     <div v-for="post in posts">
-      <h1>{{ post.title }}</h1>
+      <h1><a v-bind:href="`/posts/${post.id}`">{{ post.title }}</a></h1>
       <h3>{{ post.body }}</h3>
       <hr>
     </div>

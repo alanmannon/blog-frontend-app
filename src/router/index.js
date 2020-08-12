@@ -5,7 +5,8 @@ import Sample from '../views/Sample.vue';
 import Signup from '../views/Signup.vue';
 import Login from "../views/Login.vue";
 import PostIndex from "../views/PostIndex.vue";
-import PostsNew from "../views/PostsNew.vue"
+import PostsNew from "../views/PostsNew.vue";
+import PostsShow from "../views/PostsShow.vue";
 
 
 Vue.use(VueRouter);
@@ -51,6 +52,12 @@ const routes = [
     path: "/new.js",
     name: "Posts New",
     component: PostsNew
+  },
+
+  {
+    path: "/posts/:id",
+    name: "Posts Show",
+    component: PostsShow
   },
 
 
